@@ -1,4 +1,4 @@
-##Introduction
+## Introduction
 The code in this repo is not production ready
 It is to help me explain how to setup live preview to reflect the changes in contentful webapp in a simple way.
 
