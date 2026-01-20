@@ -1,6 +1,11 @@
 ## Introduction
 The code in this repo is not production ready
 It is to help me explain how to setup live preview to reflect the changes in contentful webapp in a simple way.
+Please refer to the below reference for more information
+
+**Reference**
+
+https://www.contentful.com/developers/docs/tutorials/preview/live-preview/
 
 ## Content Type setup
 Contentful Content Model Setup (Live Preview Demo)
@@ -86,9 +91,6 @@ The demo expects the following fields to exist and match exactly:
 
 If any field IDs or content type IDs differ, the query will return null data or fail.
 
-**Reference**
-
-https://www.contentful.com/developers/docs/tutorials/preview/live-preview/
 
 ### Create a simple app
 
