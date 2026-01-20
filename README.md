@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+**Reference**
+https://www.contentful.com/developers/docs/tutorials/preview/live-preview/
 
-## Getting Started
+**Create a simple app **
 
-First, run the development server:
+`npx create-next-app@latest live-preview-demo --typescript --app`
 
+√ Which linter would you like to use? » ESLint
+√ Would you like to use React Compiler? ... No / Yes
+√ Would you like to use Tailwind CSS? ... No / Yes
+√ Would you like your code inside a `src/` directory? ... No / Yes
+√ Would you like to customize the import alias (`@/*` by default)? ... No / Yes
+Creating a new Next.js app in C:\Projects\live-preview-demo\live-preview-demo.
+
+`cd .\live-preview-demo\`
+Install the live preview sdk
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install contentful @contentful/live-preview @contentful/rich-text-react-renderer @contentful/rich-text-types
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To use graphql
+```bash
+npm i graphql-tag
+npm i graphql
+```
+create a file called .env.local
+```bash
+NEXT_PUBLIC_CONTENTFUL_SPACE_ID=<Space id here>
+NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT_ID=master
+NEXT_PUBLIC_CONTENTFUL_DELIVERY_TOKEN=<delivery token here>
+NEXT_PUBLIC_CONTENTFUL_PREVIEW_TOKEN=<preview token here>
+CONTENTFUL_USE_PREVIEW=true    # optional
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Edit the page file with your changes you should be able to see the page in browser
+You can refer to the Github repo for the code. 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Once you verified the page is running locally by below comment we can start setting up the web app
+`npm run dev`
 
-## Learn More
+**Web App Setup**
+Got to settings \ Content Preview
+Add the URL by Create preview platform
+Name and description as appropriate. Select the content type you created for visualising demo. then use the URL based on what you see in npm run
+Mine is 
+http://localhost:3000/
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
