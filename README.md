@@ -62,8 +62,9 @@ Used in GraphQL as body { json }.
 - Field ID: body
 - Type: Rich Text
 
-If you have done this correctly you will see the content type visual modeler as below
-![alt text](https://github.com/ponsaravanan2021/contentful-live-preview-demo/blob/master/content-setup.png)
+Your Content type should look like this as below. I have more fields in content block. You may not need anything except headline and body
+
+![Fields](https://github.com/ponsaravanan2021/contentful-live-preview-demo/blob/master/content-setup.png)
 
 ### Create at least one Content Block entry with:
 - internalName
