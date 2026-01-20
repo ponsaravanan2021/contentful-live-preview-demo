@@ -1,8 +1,96 @@
+##Introduction
+The code in this repo is not production ready
+It is to help me explain how to setup live preview to reflect the changes in contentful webapp in a simple way.
+
+## Content Type setup
+Contentful Content Model Setup (Live Preview Demo)
+
+The setup requires two content types:
+
+- previewDemoPage
+- contentBlock
+
+### Content Type: Preview Demo Page
+
+#### Name: Preview Demo Page
+Content Type ID: previewDemoPage
+Display Field: title
+
+Fields
+**Title**
+- Field ID: title
+- Type: Short text
+
+**Slug**
+This field is used to fetch the page in GraphQL.
+- Field ID: slug
+- Type: Short text
+
+**Description**
+Used in GraphQL as description { json }.
+- Field ID: description
+- Type: Rich Text
+
+**Sections**
+This field represents the ordered list of sections rendered on the page.
+In GraphQL, this field is accessed as sectionsCollection.
+- Field ID: sections
+- Type: Array of Entry references
+- Allowed Content Type: contentBlock
+
+#### Content Type: Content Block
+- Name: Content Block
+- Content Type ID: contentBlock
+- Display Field: internalName
+
+**Fields**
+**Internal Name**
+- Field ID: internalName
+- Type: Short text
+
+**Headline**
+- Field ID: headline
+- Type: Short text
+
+**Body**
+Used in GraphQL as body { json }.
+- Field ID: body
+- Type: Rich Text
+
+Create at least one Content Block entry with:
+- internalName
+- headline
+- body
+
+Publish the entry.
+Preview Demo Page Entry
+
+Create a Preview Demo Page entry with:
+- title
+- slug (for example: home-page)
+- description
+- one or more linked Content Block entries in sections
+
+Publish the entry.
+### GraphQL Query Expectations
+
+The demo expects the following fields to exist and match exactly:
+
+- previewDemoPageCollection
+- slug
+- title
+- description { json }
+- sectionsCollection { items }
+- ContentBlock.headline
+- ContentBlock.body { json }
+
+If any field IDs or content type IDs differ, the query will return null data or fail.
+
 **Reference**
 
 https://www.contentful.com/developers/docs/tutorials/preview/live-preview/
 
-**Create a simple app**
+### Create a simple app
 
 ```bash
 npx create-next-app@latest live-preview-demo --typescript --app
@@ -49,7 +137,7 @@ You can refer to the Github repo for the code.
 Once you verified the page is running locally by below comment we can start setting up the web app
 `npm run dev`
 
-**Web App Setup**
+### Web App SetupWeb App Setup
 Got to settings \ Content Preview
 
 Add the URL by Create preview platform
