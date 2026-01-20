@@ -1,9 +1,12 @@
 **Reference**
+
 https://www.contentful.com/developers/docs/tutorials/preview/live-preview/
 
-**Create a simple app **
+**Create a simple app**
 
-`npx create-next-app@latest live-preview-demo --typescript --app`
+```bash
+npx create-next-app@latest live-preview-demo --typescript --app
+```
 
 √ Which linter would you like to use? » ESLint
 √ Would you like to use React Compiler? ... No / Yes
@@ -12,7 +15,9 @@ https://www.contentful.com/developers/docs/tutorials/preview/live-preview/
 √ Would you like to customize the import alias (`@/*` by default)? ... No / Yes
 Creating a new Next.js app in C:\Projects\live-preview-demo\live-preview-demo.
 
-`cd .\live-preview-demo\`
+```bash
+cd .\live-preview-demo\
+```
 
 Install the live preview sdk
 ```bash
