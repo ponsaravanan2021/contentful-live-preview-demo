@@ -51,8 +51,15 @@ Once you verified the page is running locally by below comment we can start sett
 
 **Web App Setup**
 Got to settings \ Content Preview
+
 Add the URL by Create preview platform
-Name and description as appropriate. Select the content type you created for visualising demo. then use the URL based on what you see in npm run
+
+Name and description as appropriate. Select the content type you created for visualising demo. Then use the URL based on what you see in console
+
+```bash
+npm run dev 
+```
+
 Mine is 
 http://localhost:3000/
 
