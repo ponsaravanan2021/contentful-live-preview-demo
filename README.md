@@ -62,7 +62,10 @@ Used in GraphQL as body { json }.
 - Field ID: body
 - Type: Rich Text
 
-Create at least one Content Block entry with:
+If you have done this correctly you will see the content type visual modeler as below
+![alt text](https://github.com/ponsaravanan2021/contentful-live-preview-demo/blob/master/content-setup.png)
+
+### Create at least one Content Block entry with:
 - internalName
 - headline
 - body
@@ -90,6 +93,7 @@ The demo expects the following fields to exist and match exactly:
 - ContentBlock.body { json }
 
 If any field IDs or content type IDs differ, the query will return null data or fail.
+
 
 
 ### Create a simple app
