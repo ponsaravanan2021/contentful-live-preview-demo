@@ -13,6 +13,7 @@ https://www.contentful.com/developers/docs/tutorials/preview/live-preview/
 Creating a new Next.js app in C:\Projects\live-preview-demo\live-preview-demo.
 
 `cd .\live-preview-demo\`
+
 Install the live preview sdk
 ```bash
 npm install contentful @contentful/live-preview @contentful/rich-text-react-renderer @contentful/rich-text-types
